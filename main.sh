@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "========================================"
-echo " macOS Classic Corner Spoofer"
+echo " macOS Tahoe Tamer"
 echo "========================================"
 
 # Get Input App
@@ -34,7 +34,7 @@ fi
 # Extract names
 APP_NAME=$(basename "$INPUT_APP")
 BASE_NAME="${APP_NAME%.*}"
-NEW_APP_NAME="${BASE_NAME}_Classic.app"
+NEW_APP_NAME="${BASE_NAME}_Tamed.app"
 TARGET_APP="$OUTPUT_DIR/$NEW_APP_NAME"
 
 echo ""
@@ -49,7 +49,7 @@ if [ -f "$INFO_PLIST" ]; then
     echo "[3/6] Modifying Bundle Identifier..."
     # Format a safe bundle ID (lowercase, remove spaces)
     SAFE_NAME=$(echo "$BASE_NAME" | tr '[:upper:]' '[:lower:]' | tr -d ' ')
-    plutil -replace CFBundleIdentifier -string "com.custom.$SAFE_NAME.classic" "$INFO_PLIST"
+    plutil -replace CFBundleIdentifier -string "com.custom.$SAFE_NAME.tamed" "$INFO_PLIST"
     
     # Safely extract exact executable name from Info.plist
     EXEC_NAME=$(plutil -extract CFBundleExecutable raw -o - "$INFO_PLIST")
