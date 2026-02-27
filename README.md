@@ -2,6 +2,10 @@
 
 **TahoeTamer** is a lightweight macOS shell script designed to bypass the "Liquid Glass" visual effects introduced in macOS Tahoe. By spoofing the Mach-O SDK header of an application, it forces the system to render windows using the classic, sharp-cornered aesthetic of previous macOS versions.
 
+
+https://github.com/user-attachments/assets/4114f7a6-7bcf-46f6-96b6-68e07d52676b
+
+
 ## How It Works
 
 The script performs a 6-step transformation on your target `.app` bundle:
